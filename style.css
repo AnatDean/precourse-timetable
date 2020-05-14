@@ -1,0 +1,58 @@
+html {
+  font-family: 'Questrial', sans-serif;
+}
+header {
+  text-align: center;
+}
+
+h1 {
+  margin:0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+#calendar {
+  height: auto;
+}
+
+#calendar > li {
+  border-bottom: solid 1px black;
+  border-left: solid 1px black;
+  height: auto;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+#bh {
+  padding-left: 1em;
+}
+
+li {
+  margin: 1em;
+  padding: 0;
+}
+
+.topics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.hide {
+  display: none;
+}
+
+.day {
+  display: flex;
+  background-color: rgba(255, 178, 131, 0.4);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timetable</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>✨Timetable ✨</h1>
+    </header>
+    <main>
+      <ul id="calendar">
+        <li>
+          <span class="day">
+            <button>➕</button>
+            <h2>Monday</h2>
+          </span>
+          <ul class="topics hide">
+            <li>Computer fundamentals</li>
+            <li>Command Line</li>
+            <li>Git & Github</li>
+          </ul>
+        </li>
+        <li>
+          <span class="day">
+            <button>➕</button>
+            <h2>Tuesday</h2>
+          </span>
+
+          <ul class="topics hide">
+            <li>Intro to the Internet ✨</li>
+            <li>Intro to HTML</li>
+            <li>Intro to CSS</li>
+          </ul>
+        </li>
+        <li>
+          <span class="day">
+            <button>➕</button>
+            <h2>Wednesday</h2>
+          </span>
+
+          <ul class="topics hide">
+            <li>Responsive design</li>
+            <li>Accessibility</li>
+            <li>CSS Flex Layout Module</li>
+            <li>UI frameworks</li>
+          </ul>
+        </li>
+        <li>
+          <span class="day"
+            ><button>➕</button>
+            <h2>Thursday</h2>
+          </span>
+
+          <ul class="topics hide">
+            <li>Intro to JS</li>
+            <li>Data and Variables</li>
+            <li>Functions</li>
+          </ul>
+        </li>
+        <li>
+          <span class="day"
+            ><button>➕</button>
+            <h2>Friday</h2>
+          </span>
+
+          <ul class="topics hide">
+            <li>Conditional Logic</li>
+            <li>"Truthiness"</li>
+            <li>Regular Expressions</li>
+          </ul>
+        </li>
+        <li>
+          <span id="bh" class="day"><h2>Bank Holiday Monday 🎉</h2></span>
+        </li>
+        <li>
+          <span class="day"
+            ><button>➕</button>
+            <h2>Tuesday</h2>
+          </span>
+          <ul class="topics hide">
+            <li>Arrays</li>
+            <li>Objects</li>
+            <li>Mutation</li>
+          </ul>
+        </li>
+        <li>
+          <span class="day">
+            <button>➕</button>
+            <h2>Wednesday</h2>
+          </span>
+          <ul class="topics hide">
+            <li>Iteration</li>
+          </ul>
+        </li>
+        <li>
+          <span class="day">
+            <button>➕</button>
+            <h2>Thursday</h2>
+          </span>
+          <ul class="topics hide">
+            <li>Array methods</li>
+            <li>Node Package Manager</li>
+            <li>Jest Testing Library</li>
+          </ul>
+        </li>
+        <li>
+          <span class="day"
+            ><button>➕</button>
+            <h2>Friday</h2>
+          </span>
+
+          <ul class="topics hide">
+            <li>Problem Solving</li>
+            <li>Writing Tests</li>
+          </ul>
+        </li>
+      </ul>
+    </main>
+  </body>
+  <script>
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((b) => {
+      b.addEventListener('click', ({ target }) => {
+        
+        const parent = target.parentElement;
+        const topicList = parent.nextElementSibling;
+        if (topicList.classList.contains('hide')) {
+          target.innerText = '➖';
+        } else {
+          target.innerText = '➕';
+        }
+        topicList.classList.toggle('hide');
+      });
+    });
+  </script>
+</html>
