@@ -17,10 +17,16 @@
     <main>
       <ul id="calendar">
         <li>
+          <span id="bh" class="day">
+            <h2>Bank Holiday Monday 🎉</h2>
+          </span>
+        </li>
+        <li>
           <span class="day">
             <button>➕</button>
-            <h2>Monday</h2>
+            <h2>Tuesday</h2>
           </span>
+
           <ul class="topics hide">
             <li>Computer fundamentals</li>
             <li>Command Line</li>
@@ -30,7 +36,7 @@
         <li>
           <span class="day">
             <button>➕</button>
-            <h2>Tuesday</h2>
+            <h2>Wednesday</h2>
           </span>
 
           <ul class="topics hide">
@@ -40,9 +46,9 @@
           </ul>
         </li>
         <li>
-          <span class="day">
-            <button>➕</button>
-            <h2>Wednesday</h2>
+          <span class="day"
+            ><button>➕</button>
+            <h2>Thursday</h2>
           </span>
 
           <ul class="topics hide">
@@ -55,7 +61,7 @@
         <li>
           <span class="day"
             ><button>➕</button>
-            <h2>Thursday</h2>
+            <h2>Friday</h2>
           </span>
 
           <ul class="topics hide">
@@ -65,19 +71,15 @@
           </ul>
         </li>
         <li>
-          <span class="day"
-            ><button>➕</button>
-            <h2>Friday</h2>
-          </span>
-
+          <span class="day">
+            <button>➕</button>
+            <h2>Monday</h2></span
+          >
           <ul class="topics hide">
             <li>Conditional Logic</li>
             <li>"Truthiness"</li>
             <li>Regular Expressions</li>
           </ul>
-        </li>
-        <li>
-          <span id="bh" class="day"><h2>Bank Holiday Monday 🎉</h2></span>
         </li>
         <li>
           <span class="day"
@@ -128,7 +130,6 @@
     const buttons = document.querySelectorAll('button');
     buttons.forEach((b) => {
       b.addEventListener('click', ({ target }) => {
-        
         const parent = target.parentElement;
         const topicList = parent.nextElementSibling;
         if (topicList.classList.contains('hide')) {
