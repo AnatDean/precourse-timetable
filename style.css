@@ -60,10 +60,6 @@ li {
   background-color: rgba(255, 178, 131, 0.7);
 }
 
-.week {
-  background-color: rgb(255, 131, 146, 0.7);
-  
-}
 
 button {
   background-color: transparent;
@@ -74,4 +70,12 @@ button {
 
 h4 {
   margin: 0;
+}
+
+
+.time {
+  background-color: rgb(255, 131, 146, 0.7);
+  display: inline-block;
+  width: 5em;
+  text-align: center;
 }
