@@ -17,109 +17,97 @@
     <main>
       <ul id="calendar">
         <li>
-          <span class="day">
-            <button>➕</button>
-            <h2>Monday</h2>
+          <span class="week">
+            <button>+</button>
+            <h2>Week 1: Intro & Pre-course</h2>
           </span>
-          <ul class="topics hide">
-            <li>Computer fundamentals</li>
-            <li>Command Line</li>
-            <li>Git & Github</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day">
-            <button>➕</button>
-            <h2>Tuesday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Intro to the Internet ✨</li>
-            <li>Intro to HTML</li>
-            <li>Intro to CSS</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day">
-            <button>➕</button>
-            <h2>Wednesday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Responsive design</li>
-            <li>Accessibility</li>
-            <li>CSS Flex Layout Module</li>
-            <li>UI frameworks</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day"
-            ><button>➕</button>
-            <h2>Thursday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Intro to JS</li>
-            <li>Data and Variables</li>
-            <li>Functions</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day"
-            ><button>➕</button>
-            <h2>Friday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Conditional Logic</li>
-            <li>"Truthiness"</li>
-            <li>Regular Expressions</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day">
-            <button>➕</button>
-            <h2>Monday</h2></span
-          >
-          <ul class="topics hide">
-            <li>Arrays</li>
-            <li>Objects</li>
-            <li>Mutation</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day"
-            ><button>➕</button>
-            <h2>Tuesday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Iteration</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day">
-            <button>➕</button>
-            <h2>Wednesday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Array methods</li>
-            <li>Node Package Manager</li>
-            <li>Jest Testing Library</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day">
-            <button>➕</button>
-            <h2>Thursday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Problem Solving</li>
-            <li>Writing Tests</li>
-          </ul>
-        </li>
-        <li>
-          <span class="day"
-            ><button>➕</button>
-            <h2>Friday</h2>
-          </span>
-          <ul class="topics hide">
-            <li>Advanced ES6+ patterns</li>
+          <ul class="days" id="week-calendar">
+            <li>
+              <span class="day">
+                <button>+</button>
+                <h3>Monday</h3>
+              </span>
+              <ul class="topics hide">
+                <li>Computer fundamentals</li>
+                <li>Command Line</li>
+                <li>
+                  <a
+                    href="https://www.atlassian.com/git/tutorials/what-is-version-control"
+                    >Git & Github</a
+                  >
+                </li>
+                <li>Intro to JS</li>
+                <li>
+                  <a
+                    href="https://dev.to/codenutt/everything-you-should-know-about-javascript-variables-p4f"
+                    >Data and Variables</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <span class="day"
+                ><button>+</button>
+                <h3>Tuesday</h3>
+              </span>
+              <ul class="topics hide">
+                <li>Functions</li>
+                <li>Conditional Logic</li>
+                <li>
+                  <a href="https://www.sitepoint.com/javascript-truthy-falsy/">
+                    "Truthiness"</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <span class="day"
+                ><button>+</button>
+                <h3>Wednesday</h3>
+              </span>
+              <ul class="topics hide">
+                <li>
+                  <a
+                    href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp"
+                  >
+                    Regular Expressions</a
+                  >
+                </li>
+                <li>Arrays</li>
+              </ul>
+            </li>
+            <li>
+              <span class="day">
+                <button>+</button>
+                <h3>Thursday</h3></span
+              >
+              <ul class="topics hide">
+                <li>Iteration</li>
+                <li><a href="https://javascript.info/object">Objects</a></li>
+              </ul>
+            </li>
+            <li>
+              <span class="day"
+                ><button>+</button>
+                <h3>Friday</h3>
+              </span>
+              <ul class="topics hide">
+                <li>
+                  <a
+                    href="https://codeburst.io/learn-understand-javascripts-map-function-ffc059264783"
+                  >
+                    Array methods</a
+                  >
+                </li>
+                <li>Node Package Manager</li>
+                <li>
+                  <a href="https://jestjs.io/docs/en/getting-started">
+                    Jest Testing Library</a
+                  >
+                </li>
+              </ul>
+            </li>
           </ul>
         </li>
       </ul>
@@ -134,7 +122,7 @@
         if (topicList.classList.contains('hide')) {
           target.innerText = '➖';
         } else {
-          target.innerText = '➕';
+          target.innerText = ' + ';
         }
         topicList.classList.toggle('hide');
       });

@@ -1,12 +1,14 @@
 html {
   font-family: 'Questrial', sans-serif;
+  background-color: rgb(221, 221, 221);
 }
 header {
   text-align: center;
 }
 
 h1 {
-  margin:0;
+  margin: 0;
+  font-size: 2.5em;
 }
 
 ul {
@@ -14,17 +16,19 @@ ul {
   padding: 0;
 }
 
-#calendar {
+#week-calendar {
   height: auto;
 }
 
-#calendar > li {
+#week-calendar > li {
   border-bottom: solid 1px black;
   border-left: solid 1px black;
   height: auto;
 }
 
-h2 {
+h2,
+h3,
+h4 {
   text-decoration: underline;
 }
 
@@ -46,13 +50,27 @@ li {
   display: none;
 }
 
-.day {
+.day,
+.week,
+.resource {
   display: flex;
-  background-color: rgba(255, 178, 131, 0.4);
+}
+
+.day {
+  background-color: rgba(255, 178, 131, 0.7);
+}
+
+.week {
+  background-color: rgb(255, 131, 146, 0.7);
 }
 
 button {
   background-color: transparent;
   border: none;
   font-weight: bold;
+}
+
+
+h4 {
+  margin: 0;
 }
