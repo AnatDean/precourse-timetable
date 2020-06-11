@@ -154,11 +154,26 @@
         if (topicList.classList.contains('hide')) {
           console.log('➖', buttonHeadingClone);
           target.innerText = '➖';
-          target.appendChild(buttonHeadingClone)
-
+          target.appendChild(buttonHeadingClone);
         } else {
           target.innerText = ' + ';
-          target.appendChild(buttonHeadingClone)
+          target.appendChild(buttonHeadingClone);
+        }
+        topicList.classList.toggle('hide');
+      });
+
+      buttonHeadingClone.addEventListener('click', ({ target }) => {
+        const button = target.parentElement;
+        const span = button.parentElement;
+        const topicList = span.nextElementSibling;
+
+        if (topicList.classList.contains('hide')) {
+          console.log('➖', buttonHeadingClone);
+          button.innerText = '➖';
+          button.appendChild(buttonHeadingClone);
+        } else {
+          button.innerText = ' + ';
+          button.appendChild(buttonHeadingClone);
         }
         topicList.classList.toggle('hide');
       });
