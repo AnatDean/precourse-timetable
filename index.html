@@ -19,8 +19,10 @@
         <ul class="days" id="week-calendar">
           <li>
             <span class="day">
-              <button>➖</button>
-              <h3>Day structure</h3>
+              <button>
+                ➖
+                <h3>Day structure</h3>
+              </button>
             </span>
             <ul class="topics">
               <li>
@@ -34,16 +36,18 @@
               </li>
               <li><span class="time"> 1 - 2pm</span> 🍜 Lunch 🍔</li>
               <li>
-                <span class="time"> Afternoon</span> -  lectures with
-                regular breaks and time to work on exercises.
+                <span class="time"> Afternoon</span> - lectures with regular
+                breaks and time to work on exercises.
               </li>
               <li><span class="time"> 5pm</span> - Home time 🏠</li>
             </ul>
           </li>
           <li>
             <span class="day">
-              <button>+</button>
-              <h3>Monday</h3>
+              <button>
+                +
+                <h3>Monday</h3>
+              </button>
             </span>
             <ul class="topics hide">
               <li>Computer fundamentals</li>
@@ -66,8 +70,10 @@
 
           <li>
             <span class="day"
-              ><button>+</button>
-              <h3>Tuesday</h3>
+              ><button>
+                +
+                <h3>Tuesday</h3>
+              </button>
             </span>
             <ul class="topics hide">
               <li>Functions</li>
@@ -81,8 +87,10 @@
           </li>
           <li>
             <span class="day"
-              ><button>+</button>
-              <h3>Wednesday</h3>
+              ><button>
+                +
+                <h3>Wednesday</h3>
+              </button>
             </span>
             <ul class="topics hide">
               <li>
@@ -97,9 +105,11 @@
           </li>
           <li>
             <span class="day">
-              <button>+</button>
-              <h3>Thursday</h3></span
-            >
+              <button>
+                +
+                <h3>Thursday</h3>
+              </button>
+            </span>
             <ul class="topics hide">
               <li>Iteration</li>
               <li><a href="https://javascript.info/object">Objects</a></li>
@@ -107,8 +117,10 @@
           </li>
           <li>
             <span class="day"
-              ><button>+</button>
-              <h3>Friday</h3>
+              ><button>
+                +
+                <h3>Friday</h3>
+              </button>
             </span>
             <ul class="topics hide">
               <li>
@@ -133,13 +145,20 @@
   <script>
     const buttons = document.querySelectorAll('button');
     buttons.forEach((b) => {
+      const buttonHeadingClone = b.childNodes[1];
+
       b.addEventListener('click', ({ target }) => {
         const parent = target.parentElement;
         const topicList = parent.nextElementSibling;
+
         if (topicList.classList.contains('hide')) {
+          console.log('➖', buttonHeadingClone);
           target.innerText = '➖';
+          target.appendChild(buttonHeadingClone)
+
         } else {
           target.innerText = ' + ';
+          target.appendChild(buttonHeadingClone)
         }
         topicList.classList.toggle('hide');
       });

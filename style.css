@@ -60,18 +60,22 @@ li {
   background-color: rgba(255, 178, 131, 0.7);
 }
 
-
 button {
   background-color: transparent;
   border: none;
   font-weight: bold;
+  height: 2em;
+  width: 100%;
+  text-align: start;
 }
 
+h3 {
+  display: inline;
+}
 
 h4 {
   margin: 0;
 }
-
 
 .time {
   background-color: rgb(255, 131, 146, 0.7);
