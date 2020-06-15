@@ -85,3 +85,8 @@ h4 {
   width: 5em;
   text-align: center;
 }
+a {
+  color: black;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+}
