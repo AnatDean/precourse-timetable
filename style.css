@@ -90,3 +90,8 @@ a {
   text-decoration-line: underline;
   text-decoration-style: double;
 }
+
+.sprint {
+  background-color: rgb(255, 131, 146, 0.7);
+  width: fit-content;
+}
